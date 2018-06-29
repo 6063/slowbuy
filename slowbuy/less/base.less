@@ -1,0 +1,222 @@
+// 定义全局的主体颜色
+@mainColor: #ff841d;
+@mainGradient: -webkit-gradient(linear,0 0,0 100%,from(#ffaf47),to(#ff9000));
+
+
+// 初始化
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body,html {
+  height: 100%;
+}
+
+body {
+  background-color: #fff;
+}
+ul,
+ol,
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #5a5a5a;
+}
+// 清除图片底部三像素
+img {
+  border: none;
+  vertical-algin: middle;
+}
+
+body,
+html {
+  width: 100%;
+  height: 100%;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-weight: normal;
+}
+
+.clearfix:after {
+	content: "";
+	display: block;
+	clear: both;
+	height: 0;
+	visibility: hidden;
+}
+
+.clearfix {
+	*zoom: 1;
+}
+// 头部部分的样式
+#header {
+  position: relative;
+  background-color: @mainColor;
+  height: 50px;
+  text-align: center;
+  z-index: 99;
+  .logo {
+    padding-top: 10px;
+    padding-left: 15px;
+    a {
+      display: inline-block;
+      img {
+        max-height: 25px;
+        overflow: hidden;
+        max-width: 185px;
+      }
+    }
+  }
+  .appdown {
+    height: 100%;
+    padding-top: 7px;
+    padding-right: 7px;
+    a {
+      display: block;
+      img {
+        max-height: 34px;
+        overflow: hidden;
+      }
+    }
+  }
+}
+  #main {
+    width: 100%;
+    min-height: 100%;
+  }
+  // 路径显示部分的样式
+  #path-show {
+    margin-top: 20px;
+    height: 36px;
+    background-color: #ebebeb;
+    background: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#ebebeb));
+    border-top: solid 1px #ebebeb;
+    border-bottom: 1px solid #ccc;
+    line-height: 36px;
+    padding-left: 8px;
+    font-size: 14px;
+    margin-bottom: 20px;
+    color: #5a5a5a;
+    position: relative;
+    z-index: 99;
+    .path {
+      li {
+        float: left;
+        .fa-chevron-right {
+          font-size: 12px;
+          color: #5a5a5a;
+          font-weight: normal;
+        }
+      }
+    }
+  }
+
+ // 底部部分的样式
+ #footer {
+  position: relative;
+  z-index: 999; 
+  .footer-nav {
+    text-align: center;
+    display: flex;
+    background: #efefef;
+    border-top: 1px solid #c4c4c4;
+    border-bottom: 1px solid #c4c4c4;
+    height: 34px;
+    line-height: 34px;
+    a {
+      display: inline-block;
+      margin: 0;
+      padding: 0;
+      font-size: 14px;
+    }
+    .login {
+      flex: 3;
+      border-right: 1px solid #c4c4c4;
+    }
+    .register {
+      flex: 3;
+      border-right: 1px solid #c4c4c4;
+    }
+    .top {
+      flex: 4;
+      img {
+        width: 15px;
+        height: 15px;
+        margin-right: 2px;
+
+      }
+      >i {
+        font-style: normal;
+      }
+    }
+  }
+  .bottom {
+    text-align: center;
+    background: #efefef;
+    color: #666;
+    padding: 15px;
+    p {
+      margin: 0;
+      padding: 0;
+      font-size: 12px;
+      .appdwon {
+        color: red;
+      }
+    }
+  }
+}
+// 右侧固定部分的样式
+#fixed-module {
+  position: fixed;
+  right: 0px;
+  bottom: 20px;
+  width: 64px;
+  z-index: 999;
+  a {
+    display: block;
+    img {
+      width: 100%;
+    }
+  }
+  .top {
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 10px;
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    margin: 5px auto;
+    border: 1px solid #dddddd;
+    text-align: center;
+    i {
+      color: #5a5a5a;
+      font-size: 25px;
+    }
+  }
+}
+// loading模块部分的样式
+#loading {
+  width: 100%;
+  min-height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background-color: #fff1ce;
+  display: none;
+  .loading-img {
+    width: 80%;
+    margin: 100px auto;
+    img {
+      width: 100%;
+      position: relative;
+    }
+  }
+}
